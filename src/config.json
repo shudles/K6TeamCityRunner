@@ -1,0 +1,67 @@
+{
+    "Axes":
+    [
+        {
+            "id": "ms",
+            "type": "linear",
+            "position": "left"
+        },
+        {
+            "id": "vus",
+            "type": "linear",
+            "position": "right"
+        },
+        {
+            "id": "rps",
+            "type": "linear",
+            "position": "right"
+        }
+    ],
+    "Metrics": [
+        {
+            "Name": "elastic_response_time",
+            "Statistics": [
+                {
+                    "Type": "values"
+                },
+                {
+                    "GraphName": "elastic-avg",
+                    "Type": "Avg",
+                    "Threshold": 500.0,
+                    "AxisId": "ms"
+                },
+                {
+                    "Type": "min"
+                },
+                {
+                    "Type": "max"
+                },
+                {
+                    "Type": "p95",
+                    "GraphName": "elastic-p95",
+                    "AxisId": "ms"
+                }
+            ]
+        },
+        {
+            "Name": "http_reqs",
+            "Statistics": [
+                {
+                    "Type": "Total",
+                    "GraphName": "rps",
+                    "AxisId": "rps"
+                }
+            ]
+        },
+        {
+            "Name": "vus",
+            "Statistics": [
+                {
+                    "Type": "max",
+                    "GraphName": "vus",
+                    "AxisId": "vus"
+                }
+            ]
+        }
+    ]
+}
